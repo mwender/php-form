@@ -413,7 +413,7 @@ class Validator implements \ArrayAccess
 	 *
 	 * @see getValue
 	 */
-	public function offsetGet($field)
+	public function offsetGet(mixed $field): mixed
 	{
 		return $this->getValue($field);
 	}
@@ -459,6 +459,7 @@ class Validator implements \ArrayAccess
 	 *
 	 * @see setValue
 	 */
+	#[\ReturnTypeWillChange]
 	public function offsetSet($field, $value)
 	{
 		return $this->setValue($field, $value);
@@ -479,7 +480,7 @@ class Validator implements \ArrayAccess
 	/**
 	 * @internal
 	 */
-	public function offsetExists($field)
+	public function offsetExists(mixed $field): bool
 	{
 		return array_key_exists($field, $this->values);
 	}
@@ -487,7 +488,7 @@ class Validator implements \ArrayAccess
 	/**
 	 * @internal
 	 */
-	public function offsetUnset($field)
+	public function offsetUnset(mixed $field): void
 	{
 		if ( array_key_exists($field, $this->values) ) {
 			unset($this->values[$field]);
