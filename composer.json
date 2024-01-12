@@ -1,9 +1,9 @@
 {
-    "name": "rlanvin/php-form",
+    "name": "mwender/php-form",
     "type": "library",
-    "description": "Lightweight form validation library for PHP",
+    "description": "Lightweight form validation library for PHP [forked from rlanvin/php-form for PHP8 compat]",
     "keywords": ["form","validation"],
-    "homepage": "https://github.com/rlanvin/php-form",
+    "homepage": "https://github.com/mwender/php-form",
     "license": "MIT",
     "require": {
         "php": ">=5.4.0",
